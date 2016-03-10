@@ -11,8 +11,8 @@ set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\di
 set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\amsfont
 set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\myDict
 
-" use nn to preform the jump function
-imap nn <C-j>
+" use nn to go to next
+imap nn <C-j> 
 
 " map notations
 call IMAP('ve{', '\vect{<++>}<++>', 'tex')

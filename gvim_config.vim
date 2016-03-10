@@ -5,7 +5,7 @@ imap <C-v> <S-Insert>
 vmap <C-c> y
 
 " use ctrl-; to correct spell in insert mode
-imap <C-l> <Esc>[s1z=`]a
+imap <C-;> <Esc>[s1z=`]a
 
 " color scheme
 colorscheme focuspoint 

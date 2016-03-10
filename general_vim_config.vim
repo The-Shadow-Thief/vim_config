@@ -126,7 +126,6 @@ let g:tex_compilerule_dvi = 'latexmk $*'
 if !exists('g:neocomplete#sources')
   let g:neocomplete#sources = {}
 endif
-let g:neocomplete#sources._ = ['buffer']
 let g:neocomplete#sources.tex = ['dictionary', 'UltiSnips', 'file', 'omni']
 
 " set viewer for vimlatex preview
@@ -145,6 +144,11 @@ nmap <silent> <A-k> :wincmd k<CR>
 nmap <silent> <A-j> :wincmd j<CR>
 nmap <silent> <A-h> :wincmd h<CR>
 nmap <silent> <A-l> :wincmd l<CR>
+
+" use ctrl+jklh to navigate
+imap <C-l> <Right>
+imap <C-h> <Left>
+
 
 " let d uses black hole register, so that the thing you delete will not be
 " copied to clipboard
