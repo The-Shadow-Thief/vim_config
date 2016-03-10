@@ -165,15 +165,9 @@ imap kk <Esc>
 " quick way to enter visual mode
 imap vv <Esc>v
 
-" use ctrl+c ctrl+v to do copy and paste
-imap <C-v> <S-Insert>
-vmap <C-c> y
 
 " use the shift enter to change line
 imap <S-CR> <Esc>o
-
-" use ctrl-; to correct spell in insert mode
-inoremap <C-;> <Esc>z= 
 
 " Shift lines up or down ~i
 noremap <C-j> ddp
@@ -185,18 +179,6 @@ set clipboard=unnamed
 " set line number.
 set number
 :highlight LineNr ctermfg=grey
-
-" color scheme
-colorscheme focuspoint 
-" font
-set guifont=Consolas:h10:cANSI
-" hide tool bar
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
-:set guioptions-=r  "remove right-hand scroll bar
-:set guioptions-=L  "remove left-hand scroll bar
-
-set backspace=2 " make backspace work like most other apps
 
 " set tab width as 4
 set expandtab
@@ -219,13 +201,3 @@ autocmd FocusLost * :wa
 " show matching bracket
 set showmatch       
 
-" When opening a file remember last cursor position
-if has("autocmd")
-  augroup restoreCursor
-    autocmd!
-    autocmd BufReadPost *
-          \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-          \   exe "normal! g'\"" |
-          \ endif
-  augroup END
-endif
