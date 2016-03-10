@@ -9,5 +9,17 @@ set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\di
 set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\braket
 set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\upgreek
 set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\amsfont
+set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\myDict
 
+" use nn to preform the jump function
 imap nn <C-j>
+
+" map notations
+call IMAP('ve{', '\vect{<++>}<++>', 'tex')
+call IMAP('df{', '\dfrac{<+n+>}{+d+}<++>', 'tex')
+call IMAP(' * ', ' \times ', 'tex')
+call IMAP(' . ', ' \dot ', 'tex')
+call IMAP('(', '(<++>)', 'tex')
+call IMAP('[', '[<++>]', 'tex')
+call IMAP('{', '{<++>}', 'tex')
+call IMAP('$', '$<++>$', 'tex')
