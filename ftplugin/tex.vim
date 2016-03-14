@@ -13,7 +13,8 @@ set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\di
 
 " map notations
 call IMAP('ve{', '\vect{<++>}<++>', 'tex')
-call IMAP('df{', '\dfrac{<+n+>}{+d+}<++>', 'tex')
+call IMAP('df{', '\dfrac{<+n+>}{<+d+>}<++>', 'tex')
+call IMAP('de{', '\deri{<+n+>}{<+d+>}<++>', 'tex')
 call IMAP(' * ', ' \times ', 'tex')
 call IMAP(' . ', ' \cdot ', 'tex')
 call IMAP('(', '(<++>)', 'tex')
