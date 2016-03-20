@@ -19,7 +19,6 @@ set guifont=Consolas:h10:cANSI
 
 set backspace=2 " make backspace work like most other apps
 
-
 " When opening a file remember last cursor position
 if has("autocmd")
   augroup restoreCursor

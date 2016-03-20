@@ -93,8 +93,8 @@ let g:neocomplcache_enable_at_startup = 1
 if !exists('g:neocomplcache_sources_list')
   let g:neocomplcache_sources_list = {}
 endif
-let g:neocomplcache_disabled_sources_list.tex =
-\ ['buffer_compelete']
+"let g:neocomplcache_disabled_sources_list.tex =
+"\ ['dictionary_complete']
 
 "" Enable neocomplete at startup
 "let g:neocomplete#enable_at_startup = 1
@@ -158,11 +158,6 @@ nmap <silent> <A-k> :wincmd k<CR>
 nmap <silent> <A-j> :wincmd j<CR>
 nmap <silent> <A-h> :wincmd h<CR>
 nmap <silent> <A-l> :wincmd l<CR>
-
-" use ctrl+jklh to navigate
-imap <C-l> <Right>
-imap <C-h> <Left>
-
 
 " let d uses black hole register, so that the thing you delete will not be
 " copied to clipboard
