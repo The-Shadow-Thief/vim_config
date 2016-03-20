@@ -20,9 +20,11 @@ Plugin 'taglist.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'cd01/poshcomplete-vim'
 Plugin 'kannokanno/previm'
-Plugin 'shougo/neocomplcache.vim'
 Plugin 'tyru/open-browser.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'shougo/neocomplcache.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -72,12 +74,12 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<Right>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+"" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<Right>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
 
 " set auto save event 
 let g:auto_save_events = ["TextChanged"] 
@@ -85,10 +87,19 @@ let g:auto_save_silent = 1  " do not display the auto-save notification
 
 " neocomplete use tab instead of enter
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
-" Enable neocomplete at startup
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase
-let g:neocomplete#enable_smart_case = 1
+" enable neocomplcache at startup
+let g:neocomplcache_enable_at_startup = 1
+" set neocomplcache source list
+if !exists('g:neocomplcache_sources_list')
+  let g:neocomplcache_sources_list = {}
+endif
+let g:neocomplcache_disabled_sources_list.tex =
+\ ['buffer_compelete']
+
+"" Enable neocomplete at startup
+"let g:neocomplete#enable_at_startup = 1
+"" Use smartcase
+"let g:neocomplete#enable_smart_case = 1
 
 " enable airline
 let g:airline#extensions#tabline#enabled = 1
@@ -138,6 +149,9 @@ let g:vimrplugin_r_path="C:\\Program Files\\R\\R-3.2.3\\bin\\x64"
 let TxtBrowser_Dict_Url='http://cn.bing.com/dict/search?q=text'
 " set search engine
 let TxtBrowser_Search_Engine='http://global.bing.com/search?q=test'
+
+" set previm realtime preview
+let g:previm_enable_realtime=1
 
 " navigate split windows with alt+arrow
 nmap <silent> <A-k> :wincmd k<CR>
