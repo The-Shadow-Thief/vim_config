@@ -16,11 +16,11 @@ call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 Plugin 'TxtBrowser'
 Plugin 'taglist.vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'cd01/poshcomplete-vim'
 Plugin 'chantisnake/vim-ps1'
 Plugin 'kannokanno/previm'
 Plugin 'tyru/open-browser.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/neco-vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
@@ -97,6 +97,13 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase
 let g:neocomplete#enable_smart_case = 1
+" set neocomplete source
+if !exists('g:neocomplete#sources')
+    let g:neocomplete#sources = {}
+endif
+let g:neocomplete#sources.ps1 = ['buffer', 'dictionary', 'file']
+let g:neocomplete#sources.tex = ['dictionary', 'file']
+let g:neocomplete#sources.vim = ['buffer', 'vim', 'file']
 
 " enable airline
 let g:airline#extensions#tabline#enabled = 1
