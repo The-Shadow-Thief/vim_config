@@ -29,3 +29,22 @@ if has("autocmd")
           \ endif
   augroup END
 endif
+
+" automatically refresh plugins
+function! RefreshPlugins()
+    :write
+    :source ~/_vimrc
+    :PluginInstall
+    :PluginClean
+endfunction
+command! PluginRefresh call RefreshPlugins()
+
+function! RefreshPluginsWithUpdate()
+    :write
+    :source ~/_vimrc
+    :PluginInstall
+    :PluginClean
+    :PluginUpdate
+endfunction
+command! PluginRefreshUpdate call RefreshPluginsWithUpdate()
+
