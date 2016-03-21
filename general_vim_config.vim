@@ -1,6 +1,5 @@
 filetype off                  " required
 set nocompatible              " be iMproved, required
-set rtp+=C:/Users/zcsxo/.vim
 
 " open syntax highlighting
 syntax on
@@ -14,16 +13,15 @@ call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'Windows-PowerShell-Syntax-Plugin'
 Plugin 'TxtBrowser'
 Plugin 'taglist.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'cd01/poshcomplete-vim'
-Plugin 'PProvost/vim-ps1'
+Plugin 'chantisnake/vim-ps1'
 Plugin 'kannokanno/previm'
 Plugin 'tyru/open-browser.vim'
 Plugin 'Shougo/unite.vim'
-Plugin 'shougo/neocomplcache.vim'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'bling/vim-airline'
@@ -37,7 +35,7 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'mattn/emmet-vim'
 Plugin '907th/vim-auto-save'
 Plugin 'airblade/vim-gitgutter'  
-Bundle 'chase/focuspoint-vim'
+Plugin 'chase/focuspoint-vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ynkdir/vim-bgimg'
 
@@ -87,19 +85,18 @@ let g:auto_save_silent = 1  " do not display the auto-save notification
 
 " neocomplete use tab instead of enter
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
-" enable neocomplcache at startup
-let g:neocomplcache_enable_at_startup = 1
-" set neocomplcache source list
-if !exists('g:neocomplcache_sources_list')
-  let g:neocomplcache_sources_list = {}
-endif
-"let g:neocomplcache_disabled_sources_list.tex =
-"\ ['dictionary_complete']
-
-"" Enable neocomplete at startup
-"let g:neocomplete#enable_at_startup = 1
-"" Use smartcase
-"let g:neocomplete#enable_smart_case = 1
+"" enable neocomplcache at startup
+"let g:neocomplcache_enable_at_startup = 1
+"" set neocomplcache source list
+"if !exists('g:neocomplcache_sources_list')
+  "let g:neocomplcache_sources_list = {}
+"endif
+""let g:neocomplcache_disabled_sources_list.tex =
+""\ ['dictionary_complete']
+" Enable neocomplete at startup
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase
+let g:neocomplete#enable_smart_case = 1
 
 " enable airline
 let g:airline#extensions#tabline#enabled = 1
