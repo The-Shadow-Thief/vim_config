@@ -20,9 +20,11 @@ Plugin 'taglist.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'cd01/poshcomplete-vim'
 Plugin 'kannokanno/previm'
-Plugin 'shougo/neocomplcache.vim'
 Plugin 'tyru/open-browser.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'shougo/neocomplcache.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -31,7 +33,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'vim-latex/vim-latex'
-Plugin 'jcfaria/Vim-R-plugin'
 Plugin 'mattn/emmet-vim'
 Plugin '907th/vim-auto-save'
 Plugin 'airblade/vim-gitgutter'  
@@ -85,10 +86,19 @@ let g:auto_save_silent = 1  " do not display the auto-save notification
 
 " neocomplete use tab instead of enter
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
-" Enable neocomplete at startup
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase
-let g:neocomplete#enable_smart_case = 1
+" enable neocomplcache at startup
+let g:neocomplcache_enable_at_startup = 1
+" set neocomplcache source list
+if !exists('g:neocomplcache_sources_list')
+  let g:neocomplcache_sources_list = {}
+endif
+"let g:neocomplcache_disabled_sources_list.tex =
+"\ ['dictionary_complete']
+
+"" Enable neocomplete at startup
+"let g:neocomplete#enable_at_startup = 1
+"" Use smartcase
+"let g:neocomplete#enable_smart_case = 1
 
 " enable airline
 let g:airline#extensions#tabline#enabled = 1
@@ -139,16 +149,14 @@ let TxtBrowser_Dict_Url='http://cn.bing.com/dict/search?q=text'
 " set search engine
 let TxtBrowser_Search_Engine='http://global.bing.com/search?q=test'
 
+" set previm realtime preview
+let g:previm_enable_realtime=1
+
 " navigate split windows with alt+arrow
 nmap <silent> <A-k> :wincmd k<CR>
 nmap <silent> <A-j> :wincmd j<CR>
 nmap <silent> <A-h> :wincmd h<CR>
 nmap <silent> <A-l> :wincmd l<CR>
-
-" use ctrl+jklh to navigate
-imap <C-l> <Right>
-imap <C-h> <Left>
-
 
 " let d uses black hole register, so that the thing you delete will not be
 " copied to clipboard
