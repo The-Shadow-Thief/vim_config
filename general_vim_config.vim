@@ -101,9 +101,9 @@ let g:neocomplete#enable_smart_case = 1
 if !exists('g:neocomplete#sources')
     let g:neocomplete#sources = {}
 endif
-let g:neocomplete#sources.ps1 = ['buffer', 'dictionary', 'file']
-let g:neocomplete#sources.tex = ['dictionary', 'file']
-let g:neocomplete#sources.vim = ['buffer', 'vim', 'file']
+let g:neocomplete#sources.ps1 = ['buffer', 'dictionary', 'file', 'neosnipet']
+let g:neocomplete#sources.tex = ['dictionary', 'file', 'omni', 'neosnipet']
+let g:neocomplete#sources.vim = ['buffer', 'vim', 'file', 'neosnipet']
 
 " enable airline
 let g:airline#extensions#tabline#enabled = 1
@@ -138,10 +138,7 @@ set grepprg=grep\ -nh\ $*
 let g:tex_flavor='latex'
 " set compile rule 
 let g:tex_compilerule_dvi = 'latexmk $*'
-if !exists('g:neocomplete#sources')
-  let g:neocomplete#sources = {}
-endif
-let g:neocomplete#sources.tex = ['dictionary', 'UltiSnips', 'file', 'omni']
+
 
 " set viewer for vimlatex preview
 let g:livepreview_previewer = 'sumatrapdf.exe'
