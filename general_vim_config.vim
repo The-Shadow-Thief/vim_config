@@ -17,6 +17,9 @@ imap kk <Esc>
 " quick way to enter visual mode
 imap vv <Esc>v
 
+" when changing indentation, do not vanish the visual block
+vmap > >gv
+vmap < <gv
 
 " use the shift enter to change line
 imap <S-CR> <Esc>o
