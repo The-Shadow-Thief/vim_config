@@ -208,5 +208,9 @@ function! RefreshPluginsWithUpdate()
 endfunction
 command! PluginRefreshUpdate call RefreshPluginsWithUpdate()
 
+" set utf-8
+:set encoding=utf-8
+:set fileencoding=utf-8
+
 " source the general file
 source ~/vimfiles/general_vim_config.vim

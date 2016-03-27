@@ -21,12 +21,13 @@ imap vv <Esc>v
 vmap > >gv
 vmap < <gv
 
+" use u and U to exits visual mode,
+" because I never use convert to lower or upper case anyway
+vmap u <Esc>
+vmap U <Esc>
+
 " use the shift enter to change line
 imap <S-CR> <Esc>o
-
-" Shift lines up or down ~i
-noremap <C-j> ddp
-noremap <C-k> ddkkp
 
 " force vim to access system clipboard
 set clipboard=unnamed 
