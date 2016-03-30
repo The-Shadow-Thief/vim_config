@@ -164,6 +164,9 @@ nmap <silent> <A-l> :wincmd l<CR>
 imap <C-v> <S-Insert>
 vmap <C-c> y
 
+" use ctrl-z to undo
+imap <C-z> <Esc>ui
+
 " use ctrl-; to correct spell in insert mode
 imap <C-;> <Esc>[s1z=`]a
 
