@@ -38,6 +38,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'chase/focuspoint-vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ynkdir/vim-bgimg'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax' 
+Plugin 'vim-pandoc/vim-rmarkdown'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
