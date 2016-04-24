@@ -6,9 +6,7 @@ I don't see why you need to use my key binding, but anyway...
 
 ### one liner:
 ```powershell
-powershell -nop -c 
-  "iex(New-Object Net.WebClient).DownloadString(
-    'https://raw.githubusercontent.com/chantisnake/vim_config/master/setup.ps1')"
+powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/chantisnake/vim_config/master/setup.ps1')"
 ```
 
 ### manual
