@@ -29,6 +29,19 @@ vmap U <Esc>
 " use the shift enter to change line
 imap <S-CR> <Esc>o
 
+" use alt key to navigate without exit the insert mode
+imap <A-j> <Down>
+imap <A-k> <Up>
+imap <A-h> <Left>
+imap <A-l> <Right>
+
+" use alt key to go to the end and front of the line
+imap <A-6> <Esc>^i
+imap <A-;> <Esc>;a
+
+" use control l to correct the nearest spell mistake
+imap <C-l> <Esc>[s1z=`]a
+
 " force vim to access system clipboard
 set clipboard=unnamed 
 
