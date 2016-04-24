@@ -142,6 +142,8 @@ set grepprg=grep\ -nh\ $*
 let g:tex_flavor='latex'
 " set compile rule 
 let g:tex_compilerule_dvi = 'latexmk $*'
+" disable GoToSelectMode to avoid coping <++>
+let g:Imap_GoToSelectMode = 0 
 
 
 " set viewer for vimlatex preview
