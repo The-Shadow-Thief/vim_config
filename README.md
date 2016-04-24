@@ -6,7 +6,7 @@ I don't see why you need to use my key binding, but anyway...
 
 ### one liner:
 ```powershell
-powershell -executionpolicy bypass (wget https://raw.githubusercontent.com/chantisnake/vim_config/master/setup.ps1).content
+powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/chantisnake/vim_config/master/setup.ps1')"
 ```
 
 ### manual
