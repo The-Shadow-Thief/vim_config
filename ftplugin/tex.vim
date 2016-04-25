@@ -3,13 +3,15 @@
 set iskeyword+=:
 
 "" auto start latex preview
-autocmd VimEnter * LLPStartPreview
+"autocmd VimEnter * LLPStartPreview
 
-set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\amssymb
-set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\braket
-set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\upgreek
-set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\amsfont
-set dictionary+=C:\Users\zcsxo\vimfiles\bundle\vim-latex\ftplugin\latex-suite\dictionaries\myDict
+set dictionary+=~/vimfiles/ftplugin/tex/dictionary/SIunits
+set dictionary+=~/vimfiles/ftplugin/tex/dictionary/amsfont
+set dictionary+=~/vimfiles/ftplugin/tex/dictionary/amssymb
+set dictionary+=~/vimfiles/ftplugin/tex/dictionary/braket
+set dictionary+=~/vimfiles/ftplugin/tex/dictionary/dictionary
+set dictionary+=~/vimfiles/ftplugin/tex/dictionary/myDict
+set dictionary+=~/vimfiles/ftplugin/tex/dictionary/upgreek
 
 " map notations
 call IMAP('ve{', '\vect{<++>}<++>', 'tex')
