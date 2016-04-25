@@ -1,7 +1,13 @@
 ﻿$location = Get-Location
 Set-Location $HOME
 git clone git@github.com:chantisnake/vim_config.git .\vimfiles
-echo 'source ./vimfiles/idea_vim_config.vim' |Out-File $HOME\.ideavimrc
-echo 'source ./vimfiles/vs_vim_config.vim' |Out-File $HOME\_vsvimrc
-echo 'source ./vimfiles/gvim_config.vim' |Out-File $HOME\_vimrc
+$stream = [System.IO.StreamWriter] ".ideavimrc"
+$stream.Write('source ./vimfiles/idea_vim_config.vim')
+$stream.Close()
+$stream = [System.IO.StreamWriter] "_vimrc"
+$stream.Write('source ./vimfiles/gvim_config.vim')
+$stream.Close()
+$stream = [System.IO.StreamWriter] "_vsvimrc"
+$stream.Write('source ./vimfiles/vs_vim_config.vim')
+$stream.Close()
 Set-Location $location
