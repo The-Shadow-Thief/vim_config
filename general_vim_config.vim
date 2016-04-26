@@ -7,6 +7,8 @@ nnoremap d "_d
 nnoremap dd "_dd
 vnoremap d "_d
 vnoremap p "_dP
+nmap c "_c
+vmap c "_c
 
 " change the key to go to the end of the line
 map ; $
