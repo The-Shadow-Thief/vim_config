@@ -15,8 +15,8 @@ set dictionary+=~/vimfiles/ftplugin/tex/dictionary/upgreek
 
 " map notations
 call IMAP('ve{', '\vect{<++>}<++>', 'tex')
-call IMAP('df{', '\dfrac{<+n+>}{<+d+>}<++>', 'tex')
-call IMAP('de{', '\deri{<+n+>}{<+d+>}<++>', 'tex')
+call IMAP('df{', '\dfrac{<++>}{<++>}<++>', 'tex')
+call IMAP('de{', '\deri{<++>}{<++>}<++>', 'tex')
 call IMAP(' * ', ' \times ', 'tex')
 call IMAP(' . ', ' \cdot ', 'tex')
 call IMAP('(', '(<++>)<++>', 'tex')
