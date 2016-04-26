@@ -4,7 +4,7 @@ This is a my vim configuration file, mainly focus on the experience of latex, ma
 ## install
 I don't see why you need to use my key binding, but anyway...
 
-### one liner:
+### 'two liner':
 ```powershell
 cd $HOME
 powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/chantisnake/vim_config/master/setup.ps1')"
